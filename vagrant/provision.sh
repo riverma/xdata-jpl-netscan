@@ -45,10 +45,10 @@ sudo mvn install
 # ---------- Setup new RADiX project --------
 cd /usr/local/src
 sudo mvn archetype:generate -DinteractiveMode=false -DarchetypeGroupId=org.apache.oodt -DarchetypeArtifactId=radix-archetype -DarchetypeVersion=${OODT_VERSION} -Doodt=${OODT_VERSION} -DgroupId=${RADIX_GROUP_ID} -DartifactId=${RADIX_ARTIFACT_ID} -Dversion=0.1-SNAPSHOT
-cd oodt-radix-dms/
+cd ${RADIX_ARTIFACT_ID}
 sudo cp /vagrant/vagrant/conf/oodt/filemgr.properties filemgr/src/main/resources/etc/filemgr.properties
 sudo mvn package
-tar zxf distribution/target/oodt-radix-dms-distribution-0.1-SNAPSHOT-bin.tar.gz -C ${OODT_HOME}
+tar zxf distribution/target/${RADIX_ARTIFACT_ID}-distribution-0.1-SNAPSHOT-bin.tar.gz -C ${OODT_HOME}
 
 # ---------- Start OODT ----------
 cd ${OODT_HOME}/bin
