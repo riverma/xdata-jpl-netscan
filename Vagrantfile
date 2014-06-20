@@ -1,6 +1,9 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+# Virtual machine name
+VM_NAME = "xdata_jpl_netscan"
+
 # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
 VAGRANTFILE_API_VERSION = "2"
 
@@ -12,10 +15,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "chef/ubuntu-13.10"
 
-  config.vm.define "oodt_radix" do |oodt_radix|
+  config.vm.define VM_NAME do |oodt_radix|
   end
   config.vm.provider :virtualbox do |vb|
-      vb.name = "oodt_radix"
+      vb.name = VM_NAME
   end
 
   # The url from where the 'config.vm.box' box will be fetched if it
@@ -36,7 +39,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
   # your network.
-  # config.vm.network "public_network"
+  #config.vm.network "public_network"
+  #config.vm.network "private_network", type: "dhcp"  
 
   # If true, then any SSH connections made will enable agent forwarding.
   # Default value: false

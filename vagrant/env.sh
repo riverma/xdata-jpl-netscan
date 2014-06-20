@@ -1,11 +1,13 @@
 #!/bin/bash
 
 # CHANGE BELOW FOR YOUR PROJECT NEEDS!
-export RADIX_GROUP_ID=org.jpl.nasa.gov.mydms
-export RADIX_ARTIFACT_ID=oodt-radix-mydms
+export PROJECT_GROUP_ID=mil.darpa.xdata.jpl
+export PROJECT_ARTIFACT_ID=xdata-jpl-netscan
+export BUILD_FLAGS=-Pfm-solr-catalog # NOTE: more flag options at http://s.apache.org/CJL
+export OODT_DEPLOYMENT_HOME=/usr/local/oodt
 
 # General configuration (probably don't need to modify)
-export OODT_VERSION=0.7-SNAPSHOT # NOTE: Only 0.7-SNAPSHOT currently supported b/c of Solr patch
-export OODT_HOME=/usr/local/oodt
+export OODT_SRC_REPO=https://svn.apache.org/repos/asf/oodt/trunk # NOTE: This should match the below OODT version
+export OODT_VERSION=0.7-SNAPSHOT
 export JAVA_HOME=/usr/lib/jvm/default-java
 
