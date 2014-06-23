@@ -1,0 +1,8 @@
+<cas:workflow xmlns:cas="http://oodt.jpl.nasa.gov/1.0/cas"
+  name="SparkNetscanWorkflow"
+  id="urn:mil:darpa:xdata:jpl:spark:netscan:SparkNetscanWorkflow">
+  
+  <tasks>
+    <task id="urn:mil:darpa:xdata:jpl:spark:netscan:GetIPV4Entries"/>
+  </tasks>
+</cas:workflow>

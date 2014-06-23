@@ -15,7 +15,21 @@
   limitations under the License.
 -->
 <cas:tasks xmlns:cas="http://oodt.jpl.nasa.gov/1.0/cas">
-<!--
-  TODO: Add some examples
--->
+   <task id="urn:mil:darpa:xdata:jpl:spark:netscan:GetIPV4Entries" 
+        name="GetIPV4Entries" 
+        class="org.apache.oodt.cas.pge.StdPGETaskInstance">
+     <conditions/>
+     <configuration>
+        <property name="PGETask/Name" value="GetIPV4Entries"/>
+        <property name="PGETask/ConfigFilePath" value="[PGE_HOME]/policy/netscan-getipv4entries.xml" envReplace="true"/>
+        <property name="PGETask/DumpMetadata" value="true"/>
+        <property name="PGETask/WorkflowManagerUrl" value="[WORKFLOW_URL]" envReplace="true" />
+        <property name="PGETask/Query/FileManagerUrl"     value="[FILEMGR_URL]" envReplace="true"/>
+        <property name="PGETask/Ingest/FileManagerUrl"     value="[FILEMGR_URL]" envReplace="true"/>
+        <property name="PGETask/Query/ClientTransferServiceFactory" value="org.apache.oodt.cas.filemgr.datatransfer.LocalDataTransferFactory"/>
+        <property name="PGETask/Ingest/CrawlerConfigFile" value="file:[CRAWLER_HOME]/policy/crawler-config.xml" envReplace="true"/>
+        <property name="PGE_HOME" value="[PGE_HOME]" envReplace="true"/>
+     </configuration>
+     <requiredMetFields/>
+   </task>
 </cas:tasks>
