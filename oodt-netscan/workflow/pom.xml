@@ -60,12 +60,6 @@
       <version>${project.parent.version}</version>
       <type>jar</type>
       <scope>runtime</scope>
-      <exclusions>
-        <exclusion>
-          <groupId>org.apache.oodt</groupId>
-          <artifactId>cas-filemgr</artifactId>
-        </exclusion>
-      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.apache.oodt</groupId>
@@ -77,10 +71,6 @@
       <artifactId>cas-pge</artifactId>
       <version>${oodt.pge.version}</version>
       <exclusions>
-        <exclusion>
-          <groupId>org.apache.oodt</groupId>
-          <artifactId>cas-filemgr</artifactId>
-        </exclusion>
         <exclusion>
           <groupId>org.apache.oodt</groupId>
           <artifactId>cas-crawler</artifactId>

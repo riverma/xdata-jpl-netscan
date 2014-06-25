@@ -26,6 +26,7 @@
         <property name="PGETask/WorkflowManagerUrl" value="[WORKFLOW_URL]" envReplace="true" />
         <property name="PGETask/Query/FileManagerUrl"     value="[FILEMGR_URL]" envReplace="true"/>
         <property name="PGETask/Ingest/FileManagerUrl"     value="[FILEMGR_URL]" envReplace="true"/>
+        
         <property name="PGETask/Query/ClientTransferServiceFactory" value="org.apache.oodt.cas.filemgr.datatransfer.LocalDataTransferFactory"/>
         <property name="PGETask/Ingest/CrawlerConfigFile" value="file:[CRAWLER_HOME]/policy/crawler-config.xml" envReplace="true"/>
         <property name="PGE_HOME" value="[PGE_HOME]" envReplace="true"/>

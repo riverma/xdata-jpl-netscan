@@ -28,7 +28,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <oodt.version>0.7-SNAPSHOT</oodt.version>
-    <oodt.pge.version>0.3</oodt.pge.version>
+    <oodt.pge.version>0.7-SNAPSHOT</oodt.pge.version>
   </properties>
 
   <repositories>
