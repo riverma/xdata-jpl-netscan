@@ -7,13 +7,12 @@
      <cmd>mkdir [JobOutputDir]</cmd>
      <cmd>mkdir [JobLogDir]</cmd>
     <cmd>[PGE_HOME]/bin/example-script.sh > [JobOutputDir]/HelloWorldPGE-[ProductionDateTime].output.txt</cmd>
-    <cmd>spark-submit --name "xdata.jpl.rverma.netscan.getipv4entries" --class "mil.darpa.xdata.jpl.GetIPV4Entries" --master spark://xd-spark.xdata.data-tactics-corp.com:7077 [PGE_HOME]/lib/spark-netscan-1.0-SNAPSHOT.jar "hdfs://xd-namenode.xdata.data-tactics-corp.com:8020/SummerCamp2014/voldemort-serviceprobes/port=80/000002_0" "/[JobOutputDir]/ipv4entries-[ProductionDateTime].output.txt"</cmd>
+    <cmd>spark-submit --name "xdata.jpl.rverma.netscan.getipv4entries" --class "mil.darpa.xdata.jpl.GetIPV4Entries" --master spark://xd-spark.xdata.data-tactics-corp.com:7077 [PGE_HOME]/lib/spark-netscan-1.0-SNAPSHOT.jar "hdfs://xd-namenode.xdata.data-tactics-corp.com:8020/SummerCamp2014/voldemort-serviceprobes/port=80/000002_0" "/[JobOutputDir]/netscan-random-sample-port80-[ProductionDateTime].output.txt"</cmd>
      <cmd>[OODT_HOME]/crawler/bin/crawler_launcher --operation --launchAutoCrawler \
      --filemgrUrl [FILEMGR_URL] \
      --clientTransferer org.apache.oodt.cas.filemgr.datatransfer.LocalDataTransferFactory \
      --productPath [JobOutputDir] \
-     --mimeExtractorRepo [OODT_HOME]/crawler/policy/mime-extractor-map.xml \
-     --actionIds Unique</cmd>
+     --mimeExtractorRepo [OODT_HOME]/crawler/policy/mime-extractor-map.xml</cmd>
   </exe>
 
   <!-- Files to ingest -->

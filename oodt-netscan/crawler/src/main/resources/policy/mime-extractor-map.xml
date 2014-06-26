@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cas:mimetypemap xmlns:cas="http://oodt.jpl.nassa.gov/1.0/cas" magic="true or false" mimeRepo="[OODT_HOME]/mime-types.xml">
+<cas:mimetypemap xmlns:cas="http://oodt.jpl.nassa.gov/1.0/cas" magic="true or false" mimeRepo="[OODT_HOME]/crawler/policy/mime-types.xml">
     
     <mime type="product/netscan-random-sample-port80">
       <glob pattern="netscan-random-sample-port80*.txt"/>
