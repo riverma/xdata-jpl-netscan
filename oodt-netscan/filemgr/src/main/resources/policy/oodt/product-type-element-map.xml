@@ -30,4 +30,8 @@ of elements between the types
        <element id="urn:oodt:MimeType"/>
        <element id="urn:test:DataVersion"/>
   </type>
+
+   <type id="urn:mil:darpa:xdata:jpl:netscan-random-sample-port80" parent="urn:oodt:GenericFile">
+   </type>
+  
 </cas:producttypemap>

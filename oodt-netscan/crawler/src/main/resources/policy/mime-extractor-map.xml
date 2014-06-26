@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cas:mimetypemap xmlns:cas="http://oodt.jpl.nassa.gov/1.0/cas" magic="true or false" mimeRepo="[OODT_HOME]/mime-types.xml">
+    
+    <mime type="product/netscan-random-sample-port80">
+      <glob pattern="netscan-random-sample-port80*.txt"/>
+        <extractor class="org.apache.oodt.cas.metadata.extractors.TikaCmdLineMetExtractor">
+          <config file="../etc/netscan-random-sample-port80.properties"/>
+          <preCondComparators>
+            <preCondComparator id="CheckThatDataFileSizeIsGreaterThanZero"/>
+          </preCondComparators>
+        </extractor>
+    </mime>
+    
+</cas:mimetypemap>

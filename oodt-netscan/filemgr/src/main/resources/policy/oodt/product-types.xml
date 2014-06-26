@@ -49,4 +49,40 @@ attribute.
       </extractor>
     </metExtractors>
   </type>
+
+
+  <type id="urn:mil:darpa:xdata:jpl:netscan-random-sample-port80" name="netscan-random-sample-port80">
+    <repository path="file://[OODT_HOME]/data/archive"/>
+    <versioner class="org.apache.oodt.cas.filemgr.versioning.BasicVersioner"/>
+    <!--
+You can optionally specify a 'trim' tag to identify whether
+or not you want newlines trimmed from the product type description. To
+turn off trimming (now done by default), include the following attribute with your
+description definition: trim="false"
+-->
+    <description>The default product type for any kind of file.</description>
+    <metExtractors>
+      <extractor
+        class="org.apache.oodt.cas.filemgr.metadata.extractors.CoreMetExtractor">
+        <configuration>
+          <!-- you can optionally include the envReplace tag to turn on/off environment var replacement -->
+          <property name="nsAware" value="true" />
+          <property name="elementNs" value="CAS" />
+          <property name="elements"
+            value="ProductReceivedTime,ProductName,ProductId" />
+        </configuration>
+      </extractor>
+      <extractor class="org.apache.oodt.cas.filemgr.metadata.extractors.examples.MimeTypeExtractor" />
+      <extractor class="org.apache.oodt.cas.filemgr.metadata.extractors.examples.FinalFileLocationExtractor">
+        <configuration>
+          <!-- this property specifies whether you want the FILE_LOCATION field
+computed by this extractor to replace any other FILE_LOCATION met
+attribute.
+-->
+           <property name="replace" value="true"/>
+        </configuration>
+      </extractor>
+    </metExtractors>
+  </type>
+
 </cas:producttypes>
