@@ -11,25 +11,21 @@ package mil.darpa.xdata.jpl.netscan {
 		val LOG : Logger = Logger.getLogger(this.getClass.getName)
 
 		// constants
-		val DEFAULT_SPARK_MASTER = "spark://xd-spark.xdata.data-tactics-corp.com:7077"
 		val DEFAULT_OUTPUT_FILE = "/tmp/"+this.getClass.getName
 
 		def main(args : Array[String]) {
 			
-			var spark_master = ""
 			var output_file = ""
-			if (args.length != 2) {
-				LOG.warning("No spark master or output file defined, using default spark "
-					+"master: "+DEFAULT_SPARK_MASTER+" and output file "
+			if (args.length != 1) {
+				LOG.warning("No output file defined, using default output file "
 					+DEFAULT_OUTPUT_FILE)
-				spark_master = DEFAULT_SPARK_MASTER
+				output_file = DEFAULT_OUTPUT_FILE
 			} else {
-				spark_master = args(0)
-				output_file = args(1)
+				output_file = args(0)
 			}
 
 			// Initialize Spark
-			val conf = new SparkConf().setAppName(this.getClass.getName).setMaster(spark_master)
+			val conf = new SparkConf().setAppName(this.getClass.getName)
 			val sc = new SparkContext(conf)
 
 			// Spark custom actions go here
