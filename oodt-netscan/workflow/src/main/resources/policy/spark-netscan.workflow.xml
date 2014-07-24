@@ -3,6 +3,7 @@
   id="urn:mil:darpa:xdata:jpl:spark:netscan:SparkNetscanWorkflow">
   
   <tasks>
-    <task id="urn:mil:darpa:xdata:jpl:spark:netscan:GetIPV4Entries"/>
+    <!--<task id="urn:mil:darpa:xdata:jpl:spark:netscan:GetIPV4Entries"/>-->
+    <task id="urn:mil:darpa:xdata:jpl:spark:netscan:GetIPV4EntriesRandomSample"/>
   </tasks>
 </cas:workflow>
